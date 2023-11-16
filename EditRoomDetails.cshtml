@@ -1,0 +1,57 @@
+﻿@model RoomDetails
+@{
+
+}
+
+<div class="container">
+
+    <div class="alert alert-success">تعديل بيانات الغرفة</div>
+
+    <form asp-controller="Dashboard" asp-action="UpdateRoomDetails" method="post">
+        <input type="hidden" asp-for="@Model.Id" />
+        <div class="row">
+            <div class="col">
+                <label for="IdRooms" class="p-2">رقم الغرفة</label>
+                <input type="text" id="IdRooms" name="IdRooms" class="form-control form-control-sm" asp-for="@Model.IdRooms" />
+                <span class="text-danger" asp-validation-for="IdRooms"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="Food" class="p-2"> الطعام </label>
+                <input type="text" id="Food" name="Food" class="form-control form-control-sm" asp-for="@Model.Food" />
+                <span class="text-danger" asp-validation-for="Food"></span>
+
+            </div>
+            <div class="col-sm-6">
+                <label for="Features" class="p-2">  مميزات الغرفة</label>
+                <input type="text" id="Features" name="Features" class="form-control form-control-sm" asp-for="@Model.Features" />
+                <span class="text-danger" asp-validation-for="Features"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="Image1" class="p-2">تعديل صور الغرفة </label>
+                <input type="text" id="Image1" name="Image1" class="form-control form-control-sm" asp-for="@Model.Image1" />
+                <span class="text-danger" asp-validation-for="Image1"></span>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="Image2" class="p-2">تعديل صور الغرفة  </label>
+                <input type="text" id="Image2" name="Image2" class="form-control form-control-sm" asp-for="@Model.Image2" />
+                <span class="text-danger" asp-validation-for="Image2"></span>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col text-center">
+
+                    <button class="btn btn-success" type="submit">حفظ</button>
+
+                </div>
+            </div>
+</form>
+</div>

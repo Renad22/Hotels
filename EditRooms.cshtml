@@ -1,0 +1,54 @@
+﻿@model Rooms
+@{
+
+}
+
+<div class="container">
+
+    <div class="alert alert-success">تعديل بيانات الغرفة</div>
+
+    <form asp-controller="Dashboard" asp-action="UpdateRooms" method="post">
+        <input type="hidden" asp-for="@Model.Id" />
+        <div class="row">
+            <div class="col">
+                <label for="IdHodel" class="p-2">رقم الفندق</label>
+                <input type="text" id="IdHodel" name="IdHodel" class="form-control form-control-sm" asp-for="@Model.IdHotel" />
+                <span class="text-danger" asp-validation-for="IdHotel"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="RoomNo" class="p-2"> رقم الغرفة </label>
+                <input type="text" id="RoomNo" name="RoomNo" class="form-control form-control-sm" asp-for="@Model.RoomNo" />
+                <span class="text-danger" asp-validation-for="RoomNo"></span>
+
+            </div>
+            <div class="col-sm-6">
+                <label for="Type" class="p-2">  نوع الغرفة</label>
+                <input type="text" id="Type" name="Type" class="form-control form-control-sm" asp-for="@Model.Type" />
+                <span class="text-danger" asp-validation-for="Type"></span>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="Price" class="p-2">سعر الغرفة </label>
+                <input type="text" id="Price" name="Price" class="form-control form-control-sm" asp-for="@Model.Price" />
+                <span class="text-danger" asp-validation-for="Price"></span>
+
+            </div>
+
+          </div>
+
+        <div class="row mt-3">
+            <div class="col text-center">
+
+                <button class="btn btn-success" type="submit">حفظ</button>
+
+            </div>
+        </div>
+    </form>
+</div>
